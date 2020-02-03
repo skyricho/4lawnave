@@ -37,13 +37,21 @@
         </a>
       </div>
     </div>
- 
+
 
   <div class="row row-cols-2 row-cols-md-3">
     <div class="col mb-4">
       <div class="card text-white border-0">
-        <a href="../detail.html" class="stretched-link">
-          <img src="https://placedog.net/501/240" class="card-img-top card-img-rounded" alt="Card image">
+        <a href="..\detail.html" class="stretched-link">
+          <!-- responsive example with automatic sizes calculation: -->
+          <img
+            data-sizes="auto"
+            src="..\img\inventory\IMG_3944-lqip.jpg"
+            data-src="..\img\inventory\IMG_3944-824.jpg"
+            data-srcset="..\img\inventory\IMG_3944-206.jpg 206w,
+            ..\img\inventory\IMG_3944-412.jpg 412w,
+            ..\img\inventory\IMG_3944-828.jpg 828w" class="lazyload card-img-top card-img-rounded" />
+          <!--<img src="https://placedog.net/501/240" class="card-img-top card-img-rounded" alt="Card image">-->
         </a>
           <div class="card-img-overlay">
             <p class="badge badge-warning">Claimed</p>
@@ -177,7 +185,8 @@
     <span class="text-muted">All items are free. All items must go.</span>
   </div>
 </footer>
-
+    <!-- lazysizes -->
+    <script src="..\js\lazysizes.min.js" async=""></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
