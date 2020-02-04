@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+{% block title %}Item {{ itemId }} | 4 Lawn Ave | Deceased Estate{% endblock %}
+{% block head %}
+  {{ parent() }}
+  <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/94cb094786.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="m-3">
+     <a class="" onclick="goBack()"><i class="fas fa-chevron-left align-middle"></i></a><span class="float-right"><a href="my-items.html" class="btn btn-outline-secondary">My items</a></span>
+  </div>
+
+
+
+<img src="mockup\img\inventory\IMG_{{ itemId }}-412.jpg" class="image-fluid" alt="Image of Item {{ itemId }}">
+          
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+{% endblock %}
