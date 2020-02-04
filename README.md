@@ -5,7 +5,15 @@
 
 ### Dev notes 03 FEB 2020
 
-[Lazy loading images with lazysizes](https://blog.arnellebalane.com/using-lazysizes-to-lazyload-images-on-the-web-a0fbcbf58975)
+Draft workflow:
+* Batch rotate images 360 to update exif orientation  and then scale immages
+See https://superuser.com/a/1376055
+* otpimise
+* upload to githup
+
+
+[Lazy loading images with lazysizes](https://github.com/aFarkas/lazysizes)
+See also https://blog.arnellebalane.com/using-lazysizes-to-lazyload-images-on-the-web-a0fbcbf58975
 
 [Resizing Images with Automator into multiple sizes](https://apple.stackexchange.com/questions/70491/resizing-images-with-automator-into-multiple-sizes)
 
