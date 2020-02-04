@@ -2,8 +2,9 @@
 {% block title %}{{ collectionName|capitalize }} | 4 Lawn Ave | Deceased Estate{% endblock %}
 
 {% block content %}
+  <!-- Dropdown -->
   <div class="dropdown">
-    <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="btn btn-outline-secondary dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{ collectionName|title|replace({'-': " ", })}}
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -12,4 +13,11 @@
       {% endfor %}
     </div>
   </div>
+
+  <!-- Image gallery -->
+  <ul>
+     {% for collectionItem in collectionItems %}
+        <li>{{ collectionItem.itemId }} {{ collectionItem.isClaimed }}</li>
+      {% endfor %}
+  </ul>
 {% endblock %}
