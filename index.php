@@ -14,8 +14,7 @@ $records = $result->getRecords();
 $collection = array();
 foreach($records as $record) {
     $collection[] = array(
-        'iD' => $record->getField('iD'),
-        'collection' => $record->getField('collection'),
+        'collection' => $record->getField('collection')
     );
 }
 
