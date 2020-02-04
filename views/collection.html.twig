@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ collectionName|capitalize }} | 4 Lawn Ave | Deceased Estate{% endblock %}
+
+{% block content %}
+  <div class="dropdown">
+    <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ collectionName|title|replace({'-': " ", })}}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      {% for collection in collections %}
+      	<a class="dropdown-item" href="?c={{ collection.collection|replace({' ': "-", }) }}">{{ collection.collection|title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
