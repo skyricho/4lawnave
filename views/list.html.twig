@@ -14,10 +14,30 @@
     </div>
   </div>
 
-  <!-- Image gallery -->
-  <ul>
-     {% for collectionItem in collectionItems %}
-        <li>{{ collectionItem.itemId }} {{ collectionItem.isClaimed }}</li>
-      {% endfor %}
-  </ul>
+  <!-- Image gallery --> 
+  <div class="row row-cols-2 row-cols-md-3">
+    {% for collectionItem in collectionItems %}
+      <div class="col mb-4">      
+        <div class="card text-white border-0">
+          <a href="detail.php?id={{ collectionItem.itemId }}" class="stretched-link">
+            <!-- responsive example with automatic sizes calculation: -->
+            <!--<img
+              data-sizes="auto"
+              src="..\img\inventory\IMG_3944-lqip.jpg"
+              data-src="..\img\inventory\IMG_3944-412.jpg"
+              data-srcset="..\img\inventory\IMG_3944-206.jpg 206w,
+              ..\img\inventory\IMG_3944-412.jpg 412w,
+              ..\img\inventory\IMG_3944-828.jpg 828w" class="lazyload card-img-top card-img-rounded" />-->
+            <img src="mockup\img\inventory\IMG_{{ collectionItem.itemId }}-206.jpg" class="card-img-top card-img-rounded" alt="Image of Item {{ collectionItem.itemId }}">
+          </a>
+          {% if collectionItem.isClaimed %}
+            <div class="card-img-overlay">
+              <p class="badge badge-warning">Claimed</p>
+            </div>
+          {% endif %}
+        </div>    
+      </div>
+    {% endfor %}
+  </div>
+
 {% endblock %}
