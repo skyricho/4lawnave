@@ -4,9 +4,9 @@
 {% block content %}
   <div id="test-msg"></div>
   <!-- Image gallery --> 
-  <div class="row row-cols-2 row-cols-md-3">
+  <div class="row row-cols-2 row-cols-md-3 mt-2">
     {% for myItem in myItems %}
-      <div id="item-{{ myItem.itemId }}" class="col mb-4" ic-action="fadeOut;remove">      
+      <div id="item-{{ myItem.itemId }}" class="col mb-2" ic-action="fadeOut;remove">      
         <div class="card text-white border-0">
           <a href="detail.php?id={{ myItem.itemId }}" class="">
             <!-- responsive example with automatic sizes calculation: -->
@@ -17,7 +17,7 @@
               data-srcset="..\img\inventory\IMG_3944-206.jpg 206w,
               ..\img\inventory\IMG_3944-412.jpg 412w,
               ..\img\inventory\IMG_3944-828.jpg 828w" class="lazyload card-img-top card-img-rounded" />-->
-            <img src="https://skyricho.github.io/img/inventory/IMG_{{ myItem.itemId }}-206.JPG" class="card-img-top card-img-rounded" alt="Image of Item {{ myItem.itemId }}">
+            <img src="https://skyricho.github.io/img/inventory/IMG_{{ myItem.itemId }}-206.JPG" class="card-img-top card-img-rounded rounded-lg" alt="Image of Item {{ myItem.itemId }}">
           </a>
           <!--{% if myItem.isClaimed %}
             <div class="card-img-overlay">
