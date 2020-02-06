@@ -10,12 +10,12 @@
 {% endblock %}
 
 {% block content %}
-  <div class="m-3">
+  <div class="m-2">
      <a class="" onclick="goBack()"><i class="fas fa-chevron-left align-middle"></i></a><span class="float-right"><a href="my-items.php?n={{ userFullName|replace({' ': '-'})}}" class="btn btn-outline-secondary">My items</a></span>
   </div>
 
   <!-- card with image -->
-  <div class="card bg-dark text-white mb-3">
+  <div class="card bg-dark text-white my-3">
     <img srcset="
       https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-206.JPG   206w,
       https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-412.JPG   412w,
@@ -49,7 +49,7 @@
 
 
       <div class="card">
-        <div class="card-header" id="headingOne">
+        <!--<div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Claim this item
@@ -57,7 +57,7 @@
           </h2>
         </div>
 
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">-->
           <div class="card-body">
             <form id="claimForm" action="post.php" method="post">
             <!--<form id="claimForm" ic-post-to="post.php" ic-target="#msg">-->
@@ -76,7 +76,7 @@
                 </div>
                 <input type="text" class="form-control" placeholder="04xx xxx xxx" aria-label="Username" aria-describedby="basic-addon1" name="userMobile" value="{{ userMobile }}">
               </div>
-              <button type="submit" class="btn btn-primary" name="submit" value="claim">Claim</button>
+              <button type="submit" class="btn btn-primary btn-block" name="submit" value="claim">Claim</button>
               <small id="clamlHelp" class="form-text text-muted">Feel free to claim an item even if someone else has claimed it already. Sometimes people reconsider and we can let you know if the item becomes available.</small>
             </div>
           </form>
