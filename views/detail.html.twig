@@ -16,7 +16,16 @@
 
   <!-- card with image -->
   <div class="card bg-dark text-white mb-3">
-    <img class="card-img" src="https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-412.jpg" alt="Image of Item {{ itemId }}">
+    <img srcset="
+      https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-206.JPG   206w,
+      https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-412.JPG   412w,
+      https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-828.JPG   828w,
+      https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-1240.JPG 1240w"
+
+      src="https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-1240.JPG"
+      class="card-img"
+      alt="Image of Item {{ itemId }}">
+    <!--<img class="card-img" src="https://skyricho.github.io/img/inventory/IMG_{{ itemId }}-412.jpg" alt="Image of Item {{ itemId }}">-->
     {% if isClaimed %}
       <div class="card-img-overlay">
         <p class="card-text badge badge-warning">Claimed</p>

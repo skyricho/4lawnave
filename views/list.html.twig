@@ -14,8 +14,9 @@
     </div>
   </div>
 
+  {{ msg }}
   <!-- Image gallery --> 
-  <div class="row row-cols-2 row-cols-md-3">
+  <div class="row row-cols-2 row-cols-md-3 mt-2">
     {% for collectionItem in collectionItems %}
       <div class="col mb-4">      
         <div class="card text-white border-0">
@@ -28,7 +29,7 @@
               data-srcset="..\img\inventory\IMG_3944-206.jpg 206w,
               ..\img\inventory\IMG_3944-412.jpg 412w,
               ..\img\inventory\IMG_3944-828.jpg 828w" class="lazyload card-img-top card-img-rounded" />-->
-            <img src="https://skyricho.github.io/img/inventory/IMG_{{ collectionItem.itemId }}-206.jpg" class="card-img-top card-img-rounded" alt="Image of Item {{ collectionItem.itemId }}">
+            <img src="https://skyricho.github.io/img/inventory/IMG_{{ collectionItem.itemId }}-206.JPG" class="card-img-top card-img-rounded" alt="Image of Item {{ collectionItem.itemId }}">
           </a>
           {% if collectionItem.isClaimed %}
             <div class="card-img-overlay">

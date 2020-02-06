@@ -2,7 +2,16 @@
 {% block title %}4 Lawn Ave | Deceased Estate{% endblock %}
 
 {% block content %}
-  <img src="mockup/img/4lawnave-with-caption.jpg" class="img-fluid" alt="Responsive image">
+  <img srcset="
+	https://skyricho.github.io/img/hero/hero-320.jpg   320w,
+	https://skyricho.github.io/img/hero/hero-412.jpg   412w,
+	https://skyricho.github.io/img/hero/hero-824.jpg   824w,
+	https://skyricho.github.io/img/hero/hero-1240.jpg 1240w"
+
+	src="https://skyricho.github.io/img/hero/hero-1240.jpg"
+	class="img-fluid"
+	alt="Photo of 4 Lawn Ave from the street">
+  <!--<img src="https://skyricho.github.io/img/hero/hero-412.jpg" class="img-fluid" alt="Responsive image">-->
   <h3 class="m-2">Collections</h3>
   <div class="list-group">
     {% for collection in collections %}
