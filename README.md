@@ -1,10 +1,18 @@
 # 4lawnave
  App to declutter 4 Lawn Ave
 
+TODO
+use SRCSET for image gallery on list.php
 
+
+### Dev notes 06 FEB 2020
+Unable to set cookies using intercoolerjs. So for detail page form goes to post.php and use header redirect back to detail page. Include msg parameter to invoke js to jump two steps on location history chevron button
+### Dev notes 03 FEB 2020
+Find a single record add ```$record = $records[0];```
+Image gallery on list.php 
+Change collection.php to list.php
 
 ### Dev notes 03 FEB 2020
-
 Draft workflow:
 * Batch rotate images 360 to update exif orientation  and then scale immages
 See https://superuser.com/a/1376055
