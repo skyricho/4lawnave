@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test intercoolerjs</title>
+</head>
+<body>
+<h3>Test intercoolerjs</h3>
+<div id="msg"></div>
+<form ic-post-to="intercoolerjs-post.php" ic-target="#msg">
+  <input type="hidden" name="recID" value="1">
+  <button>Submit</button>
+</form>
+
+<!-- intercoolerjs debugger -->
+<button class="btn btn-default" onclick="$.getScript('https://intercoolerreleases-leaddynocom.netdna-ssl.com/intercooler-debugger.js');">
+          Launch The Debugger</button>
+<script>$.getScript("https://intercoolerreleases-leaddynocom.netdna-ssl.com/intercooler-debugger.js");</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intercooler-js/1.2.3/intercooler.min.js" integrity="sha256-50C/DlH4b+mNf1L7FLgH1X8W0wT0qMkQ+CJ5+LmfFdo=" crossorigin="anonymous"></script>
+</body>
+</html>
