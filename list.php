@@ -1,7 +1,7 @@
 <?php
 include ("dbaccess.php");
 require 'vendor/autoload.php';
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 
 $loader = new Twig_Loader_Filesystem('views');
 $twig = new Twig_Environment($loader);
@@ -25,16 +25,23 @@ foreach($records as $record) {
 // Image gallery
 $request = $fm->newFindCommand('inventoryPHP');
 $request->addFindCriterion('cCollection', str_replace('-', ' ', $collectionName)); 
-//$request->addSortRule('field', 'value');
 $result = $request->execute();
 
-$records = $result->getRecords();
-$collectionItems = array();
-foreach($records as $record) {
-    $collectionItems[] = array(
-        'itemId' => $record->getField('itemId'),
-        'isClaimed' => $record->getField('isClaimed')
-    );
+if (FileMaker::isError($result)) {
+    if (! isset($result->code) || strlen(trim($result->code)) < 1) {
+        echo 'A System Error Occured';
+    } else {
+        $msg = 'No items found in this collection.';
+    }
+} else {
+    $records = $result->getRecords();
+    $collectionItems = array();
+    foreach($records as $record) {
+        $collectionItems[] = array(
+            'itemId' => $record->getField('itemId'),
+            'isClaimed' => $record->getField('isClaimed')
+        );
+    }
 }
 
 /*$collectionsItems = array();
@@ -47,7 +54,8 @@ $collectionItems[] = array(
 echo $template->render(array(
         'collectionName' => $collectionName,
         'collections' => $collectionList,
-        'collectionItems' => $collectionItems
+        'collectionItems' => $collectionItems,
+        'msg' => $msg
         )
     );
 
